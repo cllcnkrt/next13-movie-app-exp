@@ -1,7 +1,7 @@
 import { Inter } from "@next/font/google";
 import "@/styles/reset.css";
 import "@/styles/global.css";
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 
 const interFamily = Inter({ subsets: ["latin"] });
 
@@ -10,8 +10,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={interFamily.className}>
       <head />
       <body className="container">
-        <Header/>
+        <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
