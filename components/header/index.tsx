@@ -4,7 +4,7 @@ import React from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import styles from "./styles.module.css";
 
-const Header = () => {
+export const Header: React.FC = () => {
   return (
     <header className={`${styles.header} container fluid`}>
       <div className={styles.headerWrapper}>
@@ -20,4 +20,3 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
