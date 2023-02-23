@@ -1,10 +1,11 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+
+import { IFeaturedMovie } from "./IFeaturedMovie";
 
 import styles from "./styles.module.css";
-import { IFeaturedMovie } from "./IFeaturedMovie";
 
 export const FeaturedMovie: React.FC<IFeaturedMovie.Props> = ({ movie, isCompact = true }) => {
   const { poster_path, title, overview } = movie;

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React from "react";
-
 import { FaPlayCircle } from "react-icons/fa";
+import Link from "next/link";
+
 import styles from "./styles.module.css";
 
 export const Header: React.FC = () => {

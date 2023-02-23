@@ -1,5 +1,4 @@
 export declare module ICategories {
-  
   interface Categories {
     categories: Category[];
   }

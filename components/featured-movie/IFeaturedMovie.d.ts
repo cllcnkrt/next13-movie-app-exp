@@ -1,5 +1,4 @@
 export declare module IFeaturedMovie {
-  
   interface Props {
     movie: Movie;
     isCompact: boolean;
