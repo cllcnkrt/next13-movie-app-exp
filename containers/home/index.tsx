@@ -1,4 +1,4 @@
-import { Categories, FeaturedMovie } from "@/components";
+import { Categories, FeaturedMovie, MoviesSection } from "@/components";
 import React from "react";
 
 export const HomeContainer: React.FC = () => {
@@ -6,6 +6,7 @@ export const HomeContainer: React.FC = () => {
     <div>
       {/* <FeaturedMovie/> */}
       {/* <Categories /> */}
+      {/* <MoviesSection/> */}
     </div>
   );
 };
