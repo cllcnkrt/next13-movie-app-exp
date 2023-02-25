@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { notFound } from "next/navigation";
 
 import { MovieContainer } from "@/containers";
+import Movies from "@/mocks/movies.json";
 
 type Props = {
     params: {
@@ -11,15 +12,13 @@ type Props = {
 };
 
 const MoviePage: NextPage<Props> = ({ params: { id } }) => {
+    const movieDetail = Movies.results.find((movie) => movie.id.toString() === id.toString());
+
     if (!id) {
         notFound();
     }
 
-    return (
-        <div>
-            <MovieContainer />
-        </div>
-    );
+    return <div>{movieDetail && <MovieContainer movie={movieDetail} />}</div>;
 };
 
 export default MoviePage;

@@ -10,6 +10,7 @@ export const HomeContainer: React.FC = () => {
             <FeaturedMovie movie={Movies.results[0]} isCompact />
             <Categories categories={Genres.genres.slice(0, 5)} />
             <MoviesSection title="Popular Films" movies={Movies.results.slice(1, 7)} />
+            <MoviesSection title="Your Favorites" movies={Movies.results.slice(7, 13)} />
         </div>
     );
 };
