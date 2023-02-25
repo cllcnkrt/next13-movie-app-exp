@@ -14,11 +14,11 @@ type Props = {
 const MoviePage: NextPage<Props> = ({ params: { id } }) => {
     const movieDetail = Movies.results.find((movie) => movie.id.toString() === id.toString());
 
-    if (!id) {
+    if (!movieDetail) {
         notFound();
     }
 
-    return <div>{movieDetail && <MovieContainer movie={movieDetail} />}</div>;
+    return <>{movieDetail && <MovieContainer movie={movieDetail} />}</>;
 };
 
 export default MoviePage;
