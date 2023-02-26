@@ -1,9 +1,9 @@
 import React from "react";
-import type { NextPage } from "next";
 import { notFound } from "next/navigation";
 
-import { MovieContainer } from "@/containers";
+import { FeaturedMovie } from "@/components";
 import Movies from "@/mocks/movies.json";
+import { MovieService } from "@/services";
 
 type Props = {
     params: {
@@ -11,14 +11,13 @@ type Props = {
     };
 };
 
-const MoviePage: NextPage<Props> = ({ params: { id } }) => {
-    const movieDetail = Movies.results.find((movie) => movie.id.toString() === id.toString());
-
+const MoviePage = async ({ params: { id } }: Props) => {
+    const movieDetail = await MovieService.getMovieById(id);
     if (!movieDetail) {
         notFound();
     }
 
-    return <>{movieDetail && <MovieContainer movie={movieDetail} />}</>;
+    return <>{<FeaturedMovie movie={movieDetail} isCompact={false} />}</>;
 };
 
 export default MoviePage;

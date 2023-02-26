@@ -1,6 +1,6 @@
 import { Inter } from "@next/font/google";
 
-import { Footer, Header } from "@/components";
+import { Header } from "@/components";
 
 import "@/styles/reset.css";
 import "@/styles/global.css";
@@ -14,7 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className="container">
                 <Header />
                 <main>{children}</main>
-                <Footer />
             </body>
         </html>
     );
